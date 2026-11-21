@@ -1,0 +1,24 @@
+# Déploiement Render.com (offre gratuite)
+#
+# 1. Pousser ce fichier sur GitHub (branche main).
+# 2. Sur Render : New > Blueprint, sélectionner le dépôt.
+# 3. Renseigner DATABASE_URL (base PostgreSQL Neon/Supabase) lors de la création.
+services:
+  - type: web
+    name: ciar-mali
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: frankfurt
+    branch: main
+    autoDeploy: true
+    healthCheckPath: /api/sante
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false
+      - key: TOKEN_EXPIRATION_MINUTES
+        value: "480"
+      - key: CORS_ORIGINS
+        value: https://ciar-mali.onrender.com

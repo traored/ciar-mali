@@ -1,0 +1,44 @@
+# Environnements Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Secrets et configuration locale
+.env
+.env.*
+!.env.example
+
+# Bases de données locales (la base de production n'est pas versionnée)
+*.db
+*.sqlite
+*.sqlite3
+
+# Journaux
+*.log
+
+# Flutter / Dart
+frontend/.dart_tool/
+# L'interface compilée est versionnée : elle est servie telle quelle par l'API
+# en production (aucun SDK Flutter requis sur l'hébergeur).
+frontend/build/*
+!frontend/build/web/
+frontend/coverage/
+frontend/.flutter-plugins-dependencies
+frontend/.idea/
+frontend/*.iml
+
+# Fichiers de travail et exports locaux
+/Notes/
+
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
+.neon
+node_modules/
