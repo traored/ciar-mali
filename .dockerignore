@@ -1,0 +1,38 @@
+# Historique et outils de développement
+.git
+.gitignore
+.venv
+venv
+__pycache__
+*.py[cod]
+.pytest_cache
+.ruff_cache
+.mypy_cache
+
+# Secrets et bases locales
+.env
+.env.*
+backend/.env
+backend/.env.*
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# Sources Flutter inutiles à l'exécution (le build web est copié)
+frontend/lib
+frontend/test
+frontend/web
+frontend/.dart_tool
+frontend/.idea
+frontend/.metadata
+frontend/*.iml
+frontend/pubspec.yaml
+frontend/pubspec.lock
+frontend/analysis_options.yaml
+
+# Fichiers de travail
+Notes
+README.md
+*.bat
+*.ps1
